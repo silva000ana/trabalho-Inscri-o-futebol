@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title>Pré-inscrição</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+
+input[type=text],[type=number],[type=email] {
+  width: 30%;
+  background-color: #e3e9e3;
+  color: darkslategrey;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+}
+form{
+    margin: 40px;
+    padding-top: 70px;
+    text-align: center;
+}
+input[type=text]:hover,[type=number]:hover,[type=email]:hover {
+  background-color: #b6beb7;
+  cursor: pointer;
+}
+button{
+    width: 10%;
+    padding: 8px 0;
+    background: lightgrey;
+    color: darkslategrey;
+    font-weight: bold;
+    font-size:18px;
+    border: none;
+    border-radius:5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+button:hover {
+    background: grey;
+    transform:scale(1.2) 
+}
+p{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color:whitesmoke;
+    text-shadow: 0.2em 0.5em 0.1em #600,
+      -0.3em 0.1em 0.1em #060,
+      0.4em -0.3em 0.1em #006
+}
+body{
+    background-image:url(Campo.jpg);background-size: 100%; 
+}
+</style>
+<body>
+
+
+
+<script>
+	function mostra(frase){
+			document.write(frase);
+            document.write("<br>");
+		}
+    function exibeResultado(){
+        var nome = document.inscricaoform.nome.value;
+        var imc = document.inscricaoform.imc.value;
+		var email = document.inscricaoform.email.value;
+
+        mostra("Nome: " + nome);
+        mostra("Seu IMC é: " + imc);
+		mostra("Email do usuario: " + email);
+        if (imc>=24.9){
+            mostra("Você não pode concluir a inscrição. Seu IMC está acima do nosso ideal.");
+            mostra("Normalize sua forma física.");
+        }else if (imc<24.9){
+            var a = document.createElement("a");
+            var link = document.createTextNode("Ir para a insrição.");
+			a.appendChild(link); 
+			a.href="inscricoesFutebolParte2.html";
+			document.body.appendChild(a);
+        }
+    }
+
+</script>
+
+<body>
+    <form name="inscricaoform" id="inscricaoform" action="#">
+        <p>Nome<br>
+        <input type ="text" id="nome" name="nome"placeholder="Your name"></p>
+
+        <p>Seu IMC<br>
+        <input type="number" id="imc" name="imc"placeholder="xx.x"></p>
+
+        <p>Email<br>
+        <input type="email" id="email" name="email"placeholder="seuemail@dominio.com"></p>
+        
+        <button id="button" onclick="exibeResultado()">Enviar</button>
+    </form>
+</body>
+</html>

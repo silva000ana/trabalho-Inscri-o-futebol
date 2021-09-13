@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<title>Página inicial</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	</head>
+  <style>
+    body{
+      background-image: linear-gradient(90deg, lightgrey, white);
+    }
+   header{
+      display:flex;
+      justify-content: center;
+      transition: 1s all;
+      padding: 20px;
+    }
+    header:hover{
+      transform:scale(1.2);
+
+    }
+  p{
+    margin-top: 10px;
+    text-align: center;
+    font-size:18px;
+    font-family: 'Kaisei HarunoUmi', serif;
+    color:darkgrey;
+    transition: 1s all;
+    cursor: pointer;
+  }
+  p:hover{
+    color:rgb(80, 78, 78);
+  }
+  form {
+    margin: 50px 0;
+    padding:10px;
+    }
+    button {
+      background-color: #5214e4;
+      color: white;
+      cursor: pointer;
+      width: 10%;
+      margin-right: 20px;
+      padding: 15px;
+      font-size: 15px;
+      font-family: 'Kaisei HarunoUmi', serif;
+      color:darkgrey;
+      border: none;
+      transition: 1s all;
+      border-radius:5px;
+    }
+    button:hover{
+      background-color: #4c2f8f;
+      transform:scale(1.2);
+      color:white;
+    }
+  </style>
+<body>
+<header>
+  <img src="header.jfif" alt="Imagem de topo">
+</header>
+
+<main>
+    <p>Você precisa saber seu IMC!</p>
+<center>
+  <form action="#">
+    <p>Precisa que calculemos seu IMC:</p>
+    <br>  
+    <button onclick=location.href="calcular.imc.html" type="button">Sim, prosseguir para o calculo.</button>
+    
+    <button onclick=location.href="inscricoesFutebol.html" type="button"> Não, ir para a inscrição.</button>
+   
+  </form>
+
+</center>
+    
+</main>
+</body>
+</html>

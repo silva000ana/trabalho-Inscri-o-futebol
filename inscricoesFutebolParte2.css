@@ -1,0 +1,62 @@
+body{
+    background-image: url(futebol.jpg);background-size: 100%; 
+}
+main {
+width: 940px;
+margin: 200px auto;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+  }
+.form-control{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+    background-color:lightgrey;
+}
+.form-control:hover{
+    background-color: white;
+}
+fieldset select{
+    background-color:lightgrey;
+}
+fieldset select:hover{
+    background-color: white;
+}
+.enviar {
+width: 15%;
+margin-top: 20px;
+padding: 15px 0;
+background: #1f72be;
+color: white;
+font-weight: bold;
+font-size:18px;
+border: none;
+border-radius:5px;
+cursor: pointer;
+}
+.enviar:hover{
+    background: #2f5d87;
+}
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.texto{
+    font-family: 'Kaisei HarunoUmi', serif;
+    color:darkgrey;
+}
+.texto:hover{
+    text-shadow:  0.2em 0.5em 0.1em #600,
+  -0.3em 0.1em 0.1em rgb(15, 147, 170),
+  0.4em -0.3em 0.1em #006;
+}

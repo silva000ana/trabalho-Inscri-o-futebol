@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset ="utf-8">
+<title>Inscrição</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="inscricoesFutebolParte2.css">
+</head>
+<script>
+    function mostra(frase){
+			document.write(frase);
+            document.write("<br>");
+		}
+    function verificaTreino(){
+        var pergunta1 = document.questionario.vezes.value;
+        var pergunta2 = document.questionario.treino.value;
+		
+        if (pergunta2<300){
+            mostra("Você não pode concluir a inscrição. Seu nivel de treino não cabe nos nossos padrões.");
+            mostra("Muito obrigado, agradecemos a sua participação!");
+        }else if (pergunta2>=300){
+          alert("Parabéns, você passou em todos os nossos testes, agora você fará um teste pessoal em nossa sede.");
+          alert("Favor comparecer ao endereço: Rua dos Atletas, 43, Bairro do Futebol. Nos vemos lá!");
+          var confirma=confirm("Deseja voltar a página inicial?");
+          if(confirma==true){
+           window.open('pagina_inicial.html');
+         }
+        }
+    }
+            
+</script>
+<body>
+    <main>
+        <form name="questionario" id="questionario" action="#"> 
+            <label for="pergunta1" class="texto">Quantas vezes você treina por semana?</label>
+            <input type="text" class="form-control" id="vezes" name="vezes">
+
+            <label for="pergunta2" class="texto">Aproximadamente quantos minutos por sessão de treino?</label>
+            <input type="text" class="form-control" id="treino" name="treino">
+
+            <fieldset>
+                <legend class="texto">Quantos tipos de exercício fora o futebol voce pratica?</legend>
+                <select>
+                    <option>Um</option>
+                    <option>Dois</option>
+                    <option>Três</option>
+                    <option>Mais</option>
+                </select>
+            </fieldset>
+        <input type="submit" value="Enviar" class="enviar" onclick="verificaTreino()">
+        </form>
+    </main>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!--Slideshow - Imagens-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <br>
+            <img src="time.jfif" alt="Los Angeles" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="time2.jfif" alt="Miami" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="time3.jfif" alt="New York" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!--Esses aqui são os controladores, que passam a imagem-->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </center>
+   </form>
+</body>
+</html>
