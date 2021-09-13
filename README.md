@@ -1,1 +1,1 @@
-# trabalho-Inscri-o-futebol
+# trabalho-inscricao-futebol
